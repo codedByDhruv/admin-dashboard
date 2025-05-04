@@ -1,4 +1,5 @@
 import { Box, Grid, Paper, Typography } from '@mui/material';
+import { useEffect } from 'react';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, LineChart, Line } from 'recharts';
 
 const barData = [
@@ -21,6 +22,11 @@ const stats = [
 ];
 
 const Dashboard = () => {
+
+  useEffect(() => {
+    document.title = 'Admin Panel - Dashboard';
+  }, []);  
+
   return (
     <Box p={2}>
       <Typography variant="h4" mb={3}>Dashboard</Typography>

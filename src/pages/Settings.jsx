@@ -1,6 +1,12 @@
 import { Box, Typography, Paper } from '@mui/material';
+import { useEffect } from 'react';
 
 const Settings = () => {
+
+  useEffect(() => {
+    document.title = 'Admin Panel - Settings';
+  }, []);  
+
   return (
     <Box p={2}>
       <Typography variant="h4" mb={2}>Settings</Typography>
